@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.james.deltahacks.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Entry"
+        android:id="@+id/lblCustomEntry"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarFat"
+        android:indeterminate="false"
+        android:layout_below="@+id/lblFat"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fat: 0g"
+        android:id="@+id/lblFat"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/lblCustomEntry"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protein: 0g"
+        android:id="@+id/lblProtein"
+        android:layout_below="@+id/seekBarFat"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarProtein"
+        android:layout_below="@+id/lblProtein"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carbohydrates: 0g"
+        android:id="@+id/lblCarbs"
+        android:layout_below="@+id/seekBarProtein"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarCarbs"
+        android:layout_below="@+id/lblCarbs"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sugar: 0g"
+        android:id="@+id/lblSugar"
+        android:layout_below="@+id/seekBarCarbs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarSugar"
+        android:layout_below="@+id/lblSugar"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sodium: 0g"
+        android:id="@+id/lblSodium"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/seekBarSugar"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarSodium"
+        android:layout_below="@+id/lblSodium"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiber: 0g"
+        android:id="@+id/lblFiber"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/seekBarSodium"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarFiber"
+        android:layout_below="@+id/lblFiber"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Entry"
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/seekBarFiber"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
