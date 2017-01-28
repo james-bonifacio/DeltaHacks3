@@ -10,11 +10,11 @@ public class CustomEntry extends AppCompatActivity {
     private SeekBar seekBarFat, seekBarProtein, seekBarCarbs, seekBarSugar, seekBarFiber, seekBarSodium;
     private TextView lblFat, lblProtein, lblCarbs, lblSugar, lblFiber, lblSodium;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_entry2);
+        setContentView(R.layout.activity_custom_entry);
+
         seekBarFat();
         seekBarProtein();
         seekBarCarbs();
@@ -225,5 +225,4 @@ public class CustomEntry extends AppCompatActivity {
         );
 
     }
-
 }
