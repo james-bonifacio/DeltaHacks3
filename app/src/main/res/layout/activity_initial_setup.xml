@@ -36,14 +36,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Weight (lbs)"
         android:ems="10"
         android:id="@+id/editText"
         android:textColor="#7BC044"
         android:layout_marginTop="13dp"
         android:layout_below="@+id/editText2"
         android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignStart="@+id/editText2"
+        android:hint="Weight (lbs)" />
 
     <Button
         android:text="Next"
@@ -57,17 +57,31 @@
         android:onClick="#7BC044"
         android:textColor="@android:color/white" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginTop="35dp"
+        android:textColor="#7bc044"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:hint="First Name" />
+
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_below="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_marginTop="33dp"
-        android:layout_marginLeft="12dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:padding="3dp"
-        android:weightSum="3">
+        android:weightSum="3"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/button"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText">
 
         <RadioButton
             android:text="Male"
@@ -106,17 +120,15 @@
 
     </LinearLayout>
 
-    <EditText
-        android:layout_width="match_parent"
+    <TextView
+        android:text="Nutritional Setting"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="First Name"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_marginTop="35dp"
-        android:textColor="#7bc044"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:id="@+id/textView3"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
 
 </RelativeLayout>
