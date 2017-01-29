@@ -15,10 +15,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textSize="28sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#7BC044" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
         android:text="Please input accurate information below "
@@ -32,7 +31,7 @@
         android:textColor="#5a942b" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="Weight (lbs)"
@@ -45,7 +44,7 @@
         android:layout_alignStart="@+id/editText2" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="First Name"
@@ -53,9 +52,9 @@
         android:id="@+id/editText2"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:textColor="#7bc044" />
+        android:textColor="#7bc044"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Next"
@@ -68,5 +67,51 @@
         android:background="#5a924b"
         android:onClick="#7BC044"
         android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_below="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="3dp"
+        android:weightSum="3">
+
+        <RadioButton
+            android:text="Male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/radioButton"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_alignStart="@+id/editText" />
+
+        <RadioButton
+            android:text="Female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/radioButton2"
+            android:layout_alignBaseline="@+id/radioButton"
+            android:layout_alignBottom="@+id/radioButton"
+            android:layout_toRightOf="@+id/radioButton"
+            android:layout_toEndOf="@+id/radioButton" />
+
+        <RadioButton
+            android:text="custom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignTop="@+id/radioButton2"
+            android:layout_toRightOf="@+id/radioButton2"
+            android:layout_toEndOf="@+id/radioButton2"
+            android:id="@+id/radioButton3"
+            tools:width="30dp" />
+
+    </LinearLayout>
 
 </RelativeLayout>
