@@ -25,7 +25,7 @@ import java.io.OutputStreamWriter;
 
 public class AddEntry extends AppCompatActivity {
 
-    private Button btnAddEntry;
+    private Button btnAddEntry, btnCustom;
     private int[] valToAdd = {0,0,0,0,0,0,0};
 
     @Override
@@ -38,6 +38,16 @@ public class AddEntry extends AppCompatActivity {
 
         btnAddEntry.setOnClickListener(btnClickListener);
 
+        btnCustom = (Button)findViewById(R.id.btnCustom);
+        btnCustom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), CustomEntry.class);
+
+                startActivity(i);
+            }
+        });
+
         String foods[] = {"Beans", "Greens", "Potatoes", "Tomatoes", "Lamb", "Rams", "Hogs", "Dogs"};
 
         ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, foods);
@@ -49,7 +59,6 @@ public class AddEntry extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String food = String.valueOf(parent.getItemAtPosition((position)));
-                        Toast.makeText(AddEntry.this, food, Toast.LENGTH_SHORT).show();
 
                         switch (food){
                             case "Beans":
@@ -136,6 +145,8 @@ public class AddEntry extends AppCompatActivity {
 
         }
     };
+
+
 
     public void WriteBtn(String text) {
         // add-write text into file

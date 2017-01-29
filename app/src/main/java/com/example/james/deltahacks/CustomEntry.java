@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ public class CustomEntry extends AppCompatActivity {
 
     private SeekBar seekBarCalories, seekBarFat, seekBarProtein, seekBarCarbs, seekBarSugar, seekBarFiber, seekBarSodium;
     private TextView lblCalories, lblFat, lblProtein, lblCarbs, lblSugar, lblFiber, lblSodium;
-    private Button btnSubmit;
+    private Button btnSubmit, btnCustom;
     private int[] valToAdd = {0,0,0,0,0,0,0};
 
     @Override
@@ -32,12 +33,16 @@ public class CustomEntry extends AppCompatActivity {
 
         btnSubmit = (Button)findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(btnClickListener);
+
+
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener(){
 
         @Override
         public void onClick(View v) {
+
+
 
             valToAdd[0] = seekBarCalories.getProgress();
             valToAdd[1] = seekBarFat.getProgress();
@@ -79,6 +84,7 @@ public class CustomEntry extends AppCompatActivity {
 
         }
     };
+
 
     public void WriteBtn(String text) {
         // add-write text into file

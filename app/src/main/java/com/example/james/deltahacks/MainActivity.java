@@ -3,7 +3,6 @@ package com.example.james.deltahacks;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.widget.MaterialProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,13 +30,41 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar dailyProgressSodium;
     private ProgressBar dailyProgressFiber;
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
+
+        String data = sharedPref.getString("data", "");
+        String[] arr = data.split(":");
+        String[] arrCurr = arr[4].split(",");
+        String[] arrGoal = arr[3].split(",");
+
+
+        lblScore.setText("Score: " + arr[0]);
+        lblStreak.setText("Streak: " + arr[1]);
+        lblMacros.setText(arrCurr[0] +","+ arrCurr[1] + "," + arrCurr[2] + "," + arrCurr[3] + "," +arrCurr[4] + "," + arrCurr[5] +","+ arrCurr[6]);
+
+        dailyProgressCal.setProgress(Integer.parseInt(arrCurr[0]));
+        dailyProgressFat.setProgress(Integer.parseInt(arrCurr[1]));
+        dailyProgressProtein.setProgress(Integer.parseInt(arrCurr[2]));
+        dailyProgressCarbs.setProgress(Integer.parseInt(arrCurr[3]));
+        dailyProgressSugar.setProgress(Integer.parseInt(arrCurr[4]));
+        dailyProgressSodium.setProgress(Integer.parseInt(arrCurr[5]));
+        dailyProgressFiber.setProgress(Integer.parseInt(arrCurr[6]));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnCustomEntry = (Button)findViewById(R.id.btnCustomEntry);
-        btnCustomEntry.setOnClickListener(btnClickListener);
+        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("data","0:0:0:0,0,0,0,0,0,0:0,0,0,0,0,0,0");
+        editor.apply();
 
         btnInitial = (Button)findViewById(R.id.btnInitial);
         btnInitial.setOnClickListener(btnClickListener);
@@ -54,10 +81,9 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressProtein = (ProgressBar)findViewById(R.id.dailyProgressProtein);
         dailyProgressCarbs = (ProgressBar)findViewById(R.id.dailyProgressCarbs);
         dailyProgressSugar = (ProgressBar)findViewById(R.id.dailyProgressSugar);
-        dailyProgressSodium = (ProgressBar)findViewById(R.id.dailProgressSodium);
+        dailyProgressSodium = (ProgressBar)findViewById(R.id.dailyProgressSodium);
         dailyProgressFiber = (ProgressBar)findViewById(R.id.dailyProgressFiber);
 
-        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
         String data = sharedPref.getString("data", "");
         String[] arr = data.split(":");
         String[] arrCurr = arr[4].split(",");
@@ -82,12 +108,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             switch(v.getId()){
-                case R.id.btnCustomEntry:
-
-                    Intent i = new Intent(v.getContext(), CustomEntry.class);
-
-                    startActivity(i);
-                    break;
                 case R.id.btnInitial:
                     Intent j = new Intent(v.getContext(), InitialSetup.class);
 
