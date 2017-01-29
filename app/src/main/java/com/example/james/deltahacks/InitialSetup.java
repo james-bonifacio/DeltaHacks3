@@ -30,7 +30,7 @@ public class InitialSetup extends AppCompatActivity {
 
 
                 field.setVisibility(View.VISIBLE);
-                
+
             }
         };
         radioCustom.setOnClickListener(listen);
