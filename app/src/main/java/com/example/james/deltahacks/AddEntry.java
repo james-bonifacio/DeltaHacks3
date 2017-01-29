@@ -1,7 +1,10 @@
 package com.example.james.deltahacks;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.SyncStatusObserver;
+import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,9 +15,11 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
@@ -129,59 +134,27 @@ public class AddEntry extends AppCompatActivity {
 
             WriteBtn(toWrite);
 
-
-
-
-
         }
     };
 
     public void WriteBtn(String text) {
         // add-write text into file
-        try {
-            FileOutputStream fileout=openFileOutput(text, MODE_PRIVATE);
-            OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
-            outputWriter.write(text);
-            outputWriter.close();
 
-            //display file saved message
-            Toast.makeText(getBaseContext(), "File saved successfully!",
-                    Toast.LENGTH_SHORT).show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("data", text);
+        editor.apply();
     }
 
     public String ReadBtn() {
 
-        String s="";
-        //reading text from file
-        try {
-            FileInputStream fileIn=openFileInput("mytextfile.txt");
-            InputStreamReader InputRead= new InputStreamReader(fileIn);
+        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
 
-            char[] inputBuffer= new char[100];
+        String data = sharedPref.getString("data", "");
 
-            int charRead;
+        System.out.println(data);
 
-            while ((charRead=InputRead.read(inputBuffer))>0) {
-                // char to string conversion
-                String readstring=String.copyValueOf(inputBuffer,0,charRead);
-                s +=readstring;
-            }
-
-            System.out.println(s);
-            InputRead.close();
-            Toast.makeText(getBaseContext(), s,Toast.LENGTH_SHORT).show();
-
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return s;
+        return data;
 
     }
 }

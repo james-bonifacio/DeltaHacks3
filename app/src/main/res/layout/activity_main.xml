@@ -69,15 +69,15 @@
     <ProgressBar
         android:id="@+id/dailyProgressChol"
         android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dailyProgressFat"
-        android:layout_toLeftOf="@+id/lblTotalChol"
         android:layout_toStartOf="@+id/lblTotalChol"
         android:layout_marginTop="33dp"
         android:indeterminate="false"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignRight="@+id/dailyProgressFat"
+        android:layout_alignEnd="@+id/dailyProgressFat" />
 
     <ProgressBar
         android:id="@+id/dailyProgressCal"
@@ -116,6 +116,33 @@
         android:text="Go to Add Entry"
         android:id="@+id/btnAddEntry"
         android:layout_above="@+id/btnInitial"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Score: NA"
+        android:id="@+id/lblScore"
+        android:layout_below="@+id/lblFat"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Streak: NA"
+        android:id="@+id/lblStreak"
+        android:layout_below="@+id/lblScore"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/lblMacros"
+        android:layout_below="@+id/lblStreak"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

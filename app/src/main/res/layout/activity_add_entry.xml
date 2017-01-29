@@ -42,7 +42,10 @@
         android:text="Custom"
         android:id="@+id/btnCustom"
         android:layout_above="@+id/btnAddEntry"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/btnAddEntry"
+        android:layout_alignStart="@+id/btnAddEntry"
+        android:layout_alignRight="@+id/btnAddEntry"
+        android:layout_alignEnd="@+id/btnAddEntry" />
 
     <FrameLayout
         android:layout_width="match_parent"
