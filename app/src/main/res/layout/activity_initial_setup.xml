@@ -83,7 +83,7 @@
             android:text="Custom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton13"
+            android:id="@+id/radioCustom"
             android:layout_weight="2.09"
             android:textColor="@color/colorPrimary" />
     </RadioGroup>
@@ -122,15 +122,14 @@
         android:textColor="@android:color/white"
         android:background="@color/colorPrimaryDark"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:elevation="12dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText10"
+        android:id="@+id/dockey"
         android:hint="Doctor Key"
         android:visibility="invisible"
         android:layout_above="@+id/button2"

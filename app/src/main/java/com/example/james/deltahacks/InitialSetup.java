@@ -8,14 +8,14 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class InitialSetup extends AppCompatActivity {
-    private RadioButton custom;
+    private RadioButton radioCustom;
     private EditText field;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial_setup);
 
-        custom = (RadioButton)findViewById(R.id.customm);
+        radioCustom = (RadioButton)findViewById(R.id.radioCustom);
         field = (EditText)findViewById(R.id.dockey);
 
         View.OnClickListener listen = new View.OnClickListener() {
