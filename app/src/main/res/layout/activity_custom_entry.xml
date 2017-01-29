@@ -16,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Custom Entry"
+        android:layout_margin="20dp"
         android:id="@+id/lblCustomEntry"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -145,7 +146,7 @@
         android:layout_height="wrap_content"
         android:text="Calories: 0"
         android:id="@+id/lblCalories"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="80dp"
         android:layout_below="@+id/lblCustomEntry"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
