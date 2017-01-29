@@ -1,6 +1,7 @@
 package com.example.james.deltahacks;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,12 +20,20 @@ public class InitialSetup extends AppCompatActivity {
         radioCustom = (RadioButton)findViewById(R.id.radioCustom);
         field = (EditText)findViewById(R.id.dockey);
 
+
+
         View.OnClickListener listen = new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
-                //field.setHintTextColo;
+
+
+
+                field.setVisibility(View.VISIBLE);
+                
             }
         };
+        radioCustom.setOnClickListener(listen);
 
 
     }
