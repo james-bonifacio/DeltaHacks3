@@ -1,7 +1,10 @@
 package com.example.james.deltahacks;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -9,6 +12,7 @@ public class CustomEntry extends AppCompatActivity {
 
     private SeekBar seekBarCalories, seekBarFat, seekBarProtein, seekBarCarbs, seekBarSugar, seekBarFiber, seekBarSodium;
     private TextView lblCalories, lblFat, lblProtein, lblCarbs, lblSugar, lblFiber, lblSodium;
+    private Button btnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,18 @@ public class CustomEntry extends AppCompatActivity {
         seekBarSugar();
         seekBarFiber();
         seekBarSodium();
+
+        btnSubmit = (Button)findViewById(R.id.btnSubmit);
+        btnSubmit.setOnClickListener(btnClickListener);
     }
+
+    private View.OnClickListener btnClickListener = new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+
+        }
+    };
 
     public void seekBarCalories(){
 
