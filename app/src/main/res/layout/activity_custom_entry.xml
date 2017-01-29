@@ -28,6 +28,7 @@
         android:id="@+id/seekBarFat"
         android:indeterminate="false"
         android:layout_below="@+id/lblFat"
+        android:max="70"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -43,6 +44,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBarProtein"
+        android:max="80"
         android:layout_below="@+id/lblProtein"
         android:layout_centerHorizontal="true"
         android:indeterminate="false" />
@@ -60,6 +62,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBarCarbs"
+        android:max="250"
         android:layout_below="@+id/lblCarbs"
         android:layout_centerHorizontal="true"
         android:indeterminate="false" />
@@ -77,6 +80,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBarSugar"
+        android:max="38"
         android:layout_below="@+id/lblSugar"
         android:layout_centerHorizontal="true"
         android:indeterminate="false" />
@@ -94,6 +98,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBarSodium"
+        android:max="5"
         android:layout_below="@+id/lblSodium"
         android:layout_centerHorizontal="true"
         android:indeterminate="false" />
@@ -111,6 +116,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBarFiber"
+        android:max="34"
         android:layout_below="@+id/lblFiber"
         android:layout_centerHorizontal="true"
         android:indeterminate="false" />
@@ -137,6 +143,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBarCalories"
+        android:max="2500"
         android:layout_below="@+id/lblCalories"
         android:layout_centerHorizontal="true"
         android:indeterminate="false" />
