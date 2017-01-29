@@ -15,13 +15,13 @@ public class InitialSetup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial_setup);
 
-        custom = (RadioButton)findViewById(R.id.customm);
-        field = (EditText)findViewById(R.id.dockey);
+        //custom = (RadioButton)findViewById(R.id.customm);
+       // field = (EditText)findViewById(R.id.dockey);
 
         View.OnClickListener listen = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                field.setHintTextColo;
+                //field.setHintTextColo;
             }
         };
 
