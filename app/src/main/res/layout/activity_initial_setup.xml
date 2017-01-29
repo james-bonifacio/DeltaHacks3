@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_initial_setup"
     android:layout_width="match_parent"
@@ -11,104 +11,65 @@
     tools:context="com.example.james.deltahacks.InitialSetup">
 
     <TextView
+        android:layout_margin="20dp"
         android:text="Welcome to Delta Diet!"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="20dp"
-        android:layout_y="19dp"
-        android:id="@+id/textView14"
+        android:id="@+id/welcomeTitle"
         android:textSize="30sp"
         android:textColor="@color/colorPrimary" />
 
     <TextView
+        android:layout_marginLeft="12dp"
         android:text="Please enter accurate information below"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="49dp"
-        android:layout_y="65dp"
-        android:id="@+id/textView15"
+        android:layout_below="@+id/welcomeTitle"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/welcomeSub"
         android:textColor="@color/colorPrimaryDark" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/welcomeSub"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_x="20dp"
-        android:layout_y="85dp"
-        android:id="@+id/editText8"
+        android:id="@+id/editTextName"
         android:hint="First Name"
         android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:layout_below="@+id/editTextName"
         android:ems="10"
-        android:layout_x="20dp"
-        android:layout_y="120dp"
-        android:id="@+id/editText9"
+        android:id="@+id/editTextWeight"
         android:hint="Weight (lbs)"
         android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary" />
 
     <TextView
         android:text="Nutrition Setting"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="49dp"
-        android:layout_y="245dp"
-        android:id="@+id/textView16"
-        android:textSize="18sp"
-        android:textColor="@color/colorPrimaryDark" />
-
-    <TextView
-        android:text="Gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="49dp"
-        android:layout_y="170dp"
-        android:id="@+id/textView17"
+        android:id="@+id/lblNutrition"
+        android:layout_below="@+id/GenderSelect"
         android:textSize="18sp"
         android:textColor="@color/colorPrimaryDark" />
 
     <RadioGroup
-        android:layout_width="wrap_content"
+        android:id="@+id/radioNutrition"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_x="20dp"
-        android:layout_y="195dp">
-
-        <RadioButton
-            android:text="Male"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton12"
-            android:layout_weight="1"
-            android:layout_x="23dp"
-            android:layout_y="201dp"
-            android:textColor="@color/colorPrimary" />
-
-        <RadioButton
-            android:text="Female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton11"
-            android:layout_weight="1"
-            android:layout_x="131dp"
-            android:layout_y="201dp"
-            android:textColor="@color/colorPrimary" />
-
-    </RadioGroup>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:layout_y="270dp"
-        android:layout_x="20dp">
+        android:layout_below="@+id/lblNutrition">
 
         <RadioButton
             android:text="Recommended"
@@ -123,29 +84,68 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/radioButton13"
-            android:layout_weight="1"
+            android:layout_weight="2.09"
             android:textColor="@color/colorPrimary" />
     </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:id="@+id/GenderSelect"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lblGender">
+
+        <RadioButton
+            android:text="Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton12"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary" />
+
+        <RadioButton
+            android:text="Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton11"
+            android:layout_weight="0.90"
+            android:textColor="@color/colorPrimary" />
+
+    </RadioGroup>
+
+    <Button
+        android:text="Button"
+        android:layout_width="128dp"
+        android:layout_height="71dp"
+        android:id="@+id/button2"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="12dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_x="20dp"
-        android:layout_y="315dp"
         android:id="@+id/editText10"
         android:hint="Doctor Key"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="Button"
-        android:layout_width="128dp"
-        android:layout_height="71dp"
-        android:layout_x="20dp"
-        android:layout_y="390dp"
-        android:id="@+id/button2"
-        android:textColor="@android:color/white"
-        android:background="@color/colorPrimaryDark" />
+    <TextView
+        android:text="Gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblGender"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/welcomeSub"
+        android:layout_alignEnd="@+id/welcomeSub" />
 
-</AbsoluteLayout>
+</RelativeLayout>
