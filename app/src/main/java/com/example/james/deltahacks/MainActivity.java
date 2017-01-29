@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView lblMacros;
 
     private ProgressBar dailyProgressCal;
+    private ProgressBar dailyProgressFat;
+    private ProgressBar dailyProgressProtein;
+    private ProgressBar dailyProgressCarbs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         lblMacros = (TextView)findViewById(R.id.lblMacros);
 
         dailyProgressCal = (ProgressBar)findViewById(R.id.dailyProgressCal);
+        dailyProgressFat = (ProgressBar)findViewById(R.id.dailyProgressFat);
+        dailyProgressProtein = (ProgressBar)findViewById(R.id.dailyProgressProtein);
+        dailyProgressCarbs = (ProgressBar)findViewById(R.id.dailyProgressCarbs);
 
         SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
         String data = sharedPref.getString("data", "");
@@ -55,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
         lblMacros.setText(arrCurr[0] +","+ arrCurr[1] + "," + arrCurr[2] + "," + arrCurr[3] + "," +arrCurr[4] + "," + arrCurr[5] +","+ arrCurr[6]);
 
         dailyProgressCal.setProgress(Integer.parseInt(arrCurr[0]));
+        dailyProgressFat.setProgress(Integer.parseInt(arrCurr[1]));
+        dailyProgressProtein.setProgress(Integer.parseInt(arrCurr[2]));
+        dailyProgressCarbs.setProgress(Integer.parseInt(arrCurr[3]));
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener(){

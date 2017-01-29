@@ -22,16 +22,10 @@
         android:layout_toRightOf="@+id/dailyProgressCal"
         android:layout_toEndOf="@+id/dailyProgressCal" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go to Custom Entry"
-        android:id="@+id/btnCustomEntry"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:text="Current Daily Macro Count"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblMacros"
@@ -64,12 +58,42 @@
         android:layout_alignParentEnd="true" />
 
     <ProgressBar
-        android:id="@+id/dailyProgressChol"
+        android:id="@+id/dailyProgressProtein"
         android:layout_marginLeft="12dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dailyProgressFat"
-        android:layout_toStartOf="@+id/lblTotalChol"
+        android:layout_toStartOf="@+id/lblTotalProtein"
+        android:layout_marginTop="16dp"
+        android:indeterminate="false"
+        android:max="200"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignRight="@+id/dailyProgressFat"
+        android:layout_alignEnd="@+id/dailyProgressFat" />
+
+    <ProgressBar
+        android:id="@+id/dailyProgressCarbs"
+        android:layout_marginLeft="12dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dailyProgressProtein"
+        android:layout_toStartOf="@+id/lblTotalCarbs"
+        android:layout_toLeftOf="@+id/lblTotalCarbs"
+        android:layout_marginTop="16dp"
+        android:indeterminate="false"
+        android:max="200"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignRight="@+id/dailyProgressFat"
+        android:layout_alignEnd="@+id/dailyProgressFat" />
+
+    <ProgressBar
+        android:id="@+id/dailyProgressSugar"
+        android:layout_marginLeft="12dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dailyProgressCarbs"
+        android:layout_toStartOf="@+id/lblTotalSugar"
+        android:layout_toLeftOf="@+id/lblSugar"
         android:layout_marginTop="16dp"
         android:indeterminate="false"
         android:max="200"
@@ -82,7 +106,7 @@
         android:layout_marginLeft="12dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dailyProgressChol"
+        android:layout_below="@+id/dailyProgressSugar"
         android:layout_toStartOf="@+id/lblTotalSodium"
         android:layout_marginTop="16dp"
         android:indeterminate="false"
@@ -91,16 +115,67 @@
         android:layout_alignRight="@+id/dailyProgressFat"
         android:layout_alignEnd="@+id/dailyProgressFat" />
 
+    <ProgressBar
+        android:id="@+id/dailyProgressFiber"
+        android:layout_marginLeft="12dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dailyProgressSodium"
+        android:layout_toStartOf="@+id/lblTotalFiber"
+        android:layout_marginTop="16dp"
+        android:indeterminate="false"
+        android:max="200"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignRight="@+id/dailyProgressFat"
+        android:layout_alignEnd="@+id/dailyProgressFat" />
+
+    <TextView
+        android:text="Sugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTotalSugar"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignTop="@+id/dailyProgressSugar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/lblTotalSodium"
+        android:layout_alignStart="@+id/lblTotalSodium" />
+
     <TextView
         android:text="Sodium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:id="@+id/lblTotalSodium"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignTop="@+id/dailyProgressSodium"
-        android:layout_alignLeft="@+id/lblFat"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Fiber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/lblTotalFiber"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignTop="@+id/dailyProgressFiber"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/lblTotalSodium"
+        android:layout_alignStart="@+id/lblTotalSodium" />
+
+    <TextView
+        android:text="Carbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTotalCarbs"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignTop="@+id/dailyProgressCarbs"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/lblTotalSugar"
+        android:layout_alignStart="@+id/lblTotalSugar" />
 
     <ProgressBar
         android:id="@+id/dailyProgressCal"
@@ -109,29 +184,31 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mainTitle"
-        android:layout_toLeftOf="@+id/lblFat"
-        android:layout_toStartOf="@+id/lblFat"
+        android:layout_toLeftOf="@+id/lblTotalProtein"
+        android:layout_toStartOf="@+id/lblTotalProtein"
         android:layout_marginTop="28dp"
         android:indeterminate="false"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:max="2200"/>
 
     <TextView
-        android:text="Cholesterol"
+        android:text="Protein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lblFat"
+        android:id="@+id/lblTotalProtein"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_alignTop="@+id/dailyProgressChol"
+        android:layout_alignTop="@+id/dailyProgressProtein"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/lblTotalCarbs"
+        android:layout_alignStart="@+id/lblTotalCarbs" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to Initial Setup"
         android:id="@+id/btnInitial"
-        android:layout_above="@+id/btnCustomEntry"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <Button
