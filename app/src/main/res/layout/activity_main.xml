@@ -9,6 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.james.deltahacks.MainActivity">
 
+    <TextView
+        android:text="Calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/totalCal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/totalCal"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_toRightOf="@+id/totalCal"
+        android:layout_toEndOf="@+id/totalCal" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,12 +43,57 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
     <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar7"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/totalCal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textView4"
+        android:layout_toStartOf="@+id/textView4" />
+
+    <TextView
+        android:text="Fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblFat"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignTop="@+id/seekBar7"
+        android:layout_toRightOf="@+id/seekBar7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar8"
+        android:layout_below="@+id/seekBar7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:layout_toLeftOf="@+id/lblFat"
+        android:layout_toStartOf="@+id/lblFat" />
+
+    <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/totalCal"
+        android:layout_marginTop="23dp"
         android:layout_below="@+id/mainTitle"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="13dp" />
+        android:layout_toLeftOf="@+id/lblFat"
+        android:layout_toStartOf="@+id/lblFat" />
+
+    <TextView
+        android:text="Cholesterol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblFat"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignTop="@+id/seekBar8"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
