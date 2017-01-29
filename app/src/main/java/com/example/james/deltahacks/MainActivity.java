@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
+
         btnInitial = (Button)findViewById(R.id.btnInitial);
         btnInitial.setOnClickListener(btnClickListener);
 
@@ -80,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressSodium = (ProgressBar)findViewById(R.id.dailyProgressSodium);
         dailyProgressFiber = (ProgressBar)findViewById(R.id.dailyProgressFiber);
 
-        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
         String data = sharedPref.getString("data", "");
         String[] arr = data.split(":");
         String[] arrCurr = arr[4].split(",");

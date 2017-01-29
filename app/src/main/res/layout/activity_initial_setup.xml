@@ -55,21 +55,23 @@
 
     <TextView
         android:text="Nutrition Setting"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lblNutrition"
-        android:layout_below="@+id/GenderSelect"
         android:textSize="18sp"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_above="@+id/radioNutrition"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <RadioGroup
         android:id="@+id/radioNutrition"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/lblNutrition">
+        android:layout_above="@+id/dockey"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <RadioButton
             android:text="Recommended"
@@ -91,10 +93,11 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:id="@+id/GenderSelect"
         android:orientation="horizontal"
-        android:layout_below="@+id/lblGender">
+        android:layout_above="@+id/lblNutrition"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <RadioButton
             android:text="Male"
@@ -143,8 +146,8 @@
         android:id="@+id/lblGender"
         android:textSize="18sp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/welcomeSub"
-        android:layout_alignEnd="@+id/welcomeSub" />
+        android:layout_above="@+id/GenderSelect"
+        android:layout_alignRight="@+id/editTextWeight"
+        android:layout_alignEnd="@+id/editTextWeight" />
 
 </RelativeLayout>
