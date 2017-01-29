@@ -73,7 +73,7 @@
         android:layout_below="@+id/editText"
         android:layout_width="match_parent"
         android:layout_marginTop="33dp"
-        android:layout_marginLeft="1"
+        android:layout_marginLeft="12dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
