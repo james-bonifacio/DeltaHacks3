@@ -64,14 +64,9 @@ public class MainActivity extends AppCompatActivity {
             switch(v.getId()){
                 case R.id.btnCustomEntry:
 
-                    SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                    Intent i = new Intent(v.getContext(), CustomEntry.class);
 
-                    String data = sharedPref.getString("data", "");
-
-                    Toast.makeText(MainActivity.this, data, Toast.LENGTH_SHORT).show();
-                    //Intent i = new Intent(v.getContext(), CustomEntry.class);
-
-                    //startActivity(i);
+                    startActivity(i);
                     break;
                 case R.id.btnInitial:
                     Intent j = new Intent(v.getContext(), InitialSetup.class);
