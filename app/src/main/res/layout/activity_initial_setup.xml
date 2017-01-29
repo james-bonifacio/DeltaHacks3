@@ -102,7 +102,7 @@
             android:layout_toEndOf="@+id/radioButton" />
 
         <RadioButton
-            android:text="custom"
+            android:text="Custom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
