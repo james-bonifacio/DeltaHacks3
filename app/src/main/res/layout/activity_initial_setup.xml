@@ -10,4 +10,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.james.deltahacks.InitialSetup">
 
+    <TextView
+        android:text="Welcome to Delta Diet!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="28sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#7BC044" />
+
+    <TextView
+        android:text="Please input accurate information below "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView2"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textColor="#5a942b" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Weight (lbs)"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:textColor="#7BC044"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="First Name"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:textColor="#7bc044" />
+
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_marginBottom="112dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#5a924b"
+        android:onClick="#7BC044"
+        android:textColor="@android:color/white" />
+
 </RelativeLayout>
