@@ -18,7 +18,8 @@
         <activity android:name=".CustomEntry" />
         <activity android:name=".InitialSetup" />
         <activity android:name=".AddEntry" />
-        <activity android:name=".Achievements"></activity>
+        <activity android:name=".Achievements" />
+        <activity android:name=".activityslider"></activity>
     </application>
 
 </manifest>
