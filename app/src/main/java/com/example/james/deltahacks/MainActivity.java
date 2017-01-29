@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressSodium.setProgress(Integer.parseInt(arrCurr[5]));
         dailyProgressFiber.setProgress(Integer.parseInt(arrCurr[6]));
     }
-
+    
     private View.OnClickListener btnClickListener = new View.OnClickListener(){
 
         @Override

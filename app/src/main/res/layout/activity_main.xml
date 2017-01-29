@@ -24,7 +24,7 @@
 
     <TextView
         android:text="Current Daily Macro Count"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -186,7 +186,7 @@
         android:layout_below="@+id/mainTitle"
         android:layout_toLeftOf="@+id/lblTotalProtein"
         android:layout_toStartOf="@+id/lblTotalProtein"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:indeterminate="false"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:max="2200"/>
@@ -206,14 +206,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Initial Setup"
-        android:id="@+id/btnInitial"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Go to Add Entry"
         android:id="@+id/btnAddEntry"
         android:layout_above="@+id/btnInitial"
@@ -225,11 +217,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:text="Hi, Dean!"
+        android:id="@+id/Name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Score: NA"
         android:id="@+id/lblScore"
+        android:layout_below="@+id/Name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp" />
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -246,6 +248,14 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/lblMacros"
         android:layout_below="@+id/lblStreak"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Initial Setup"
+        android:id="@+id/btnInitial"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
