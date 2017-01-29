@@ -17,7 +17,9 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
 
     <TextView
         android:text="Please input accurate information below "
@@ -43,19 +45,6 @@
         android:layout_alignLeft="@+id/editText2"
         android:layout_alignStart="@+id/editText2" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="First Name"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/textView2"
-        android:textColor="#7bc044"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Next"
         android:layout_width="wrap_content"
@@ -73,7 +62,7 @@
         android:layout_below="@+id/editText"
         android:layout_width="match_parent"
         android:layout_marginTop="33dp"
-        android:layout_marginLeft="1"
+        android:layout_marginLeft="12dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
@@ -88,7 +77,8 @@
             android:id="@+id/radioButton"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/editText"
-            android:layout_alignStart="@+id/editText" />
+            android:layout_alignStart="@+id/editText"
+            android:textColor="@color/colorPrimary" />
 
         <RadioButton
             android:text="Female"
@@ -99,10 +89,11 @@
             android:layout_alignBaseline="@+id/radioButton"
             android:layout_alignBottom="@+id/radioButton"
             android:layout_toRightOf="@+id/radioButton"
-            android:layout_toEndOf="@+id/radioButton" />
+            android:layout_toEndOf="@+id/radioButton"
+            android:textColor="@color/colorPrimary" />
 
         <RadioButton
-            android:text="custom"
+            android:text="Custom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -110,8 +101,22 @@
             android:layout_toRightOf="@+id/radioButton2"
             android:layout_toEndOf="@+id/radioButton2"
             android:id="@+id/radioButton3"
-            tools:width="30dp" />
+            tools:width="30dp"
+            android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="First Name"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginTop="35dp"
+        android:textColor="#7bc044"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
 
 </RelativeLayout>
