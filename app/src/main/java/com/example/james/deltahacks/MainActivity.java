@@ -3,6 +3,7 @@ package com.example.james.deltahacks;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.widget.MaterialProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar dailyProgressFat;
     private ProgressBar dailyProgressProtein;
     private ProgressBar dailyProgressCarbs;
+    private ProgressBar dailyProgressSugar;
+    private ProgressBar dailyProgressSodium;
+    private ProgressBar dailyProgressFiber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressFat = (ProgressBar)findViewById(R.id.dailyProgressFat);
         dailyProgressProtein = (ProgressBar)findViewById(R.id.dailyProgressProtein);
         dailyProgressCarbs = (ProgressBar)findViewById(R.id.dailyProgressCarbs);
+        dailyProgressSugar = (ProgressBar)findViewById(R.id.dailyProgressSugar);
+        dailyProgressSodium = (ProgressBar)findViewById(R.id.dailProgressSodium);
+        dailyProgressFiber = (ProgressBar)findViewById(R.id.dailyProgressFiber);
 
         SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
         String data = sharedPref.getString("data", "");
@@ -65,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressFat.setProgress(Integer.parseInt(arrCurr[1]));
         dailyProgressProtein.setProgress(Integer.parseInt(arrCurr[2]));
         dailyProgressCarbs.setProgress(Integer.parseInt(arrCurr[3]));
+        dailyProgressSugar.setProgress(Integer.parseInt(arrCurr[4]));
+        dailyProgressSodium.setProgress(Integer.parseInt(arrCurr[5]));
+        dailyProgressFiber.setProgress(Integer.parseInt(arrCurr[6]));
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener(){
