@@ -9,13 +9,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.james.deltahacks.CustomEntry">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Custom Entry"
         android:id="@+id/lblCustomEntry"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <SeekBar
         android:layout_width="fill_parent"
@@ -23,15 +25,6 @@
         android:id="@+id/seekBarFat"
         android:indeterminate="false"
         android:layout_below="@+id/lblFat"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fat: 0g"
-        android:id="@+id/lblFat"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/lblCustomEntry"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -127,4 +120,33 @@
         android:layout_marginTop="29dp"
         android:layout_below="@+id/seekBarFiber"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fat: 0g"
+        android:id="@+id/lblFat"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/seekBarCalories"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarCalories"
+        android:layout_below="@+id/lblCalories"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories: 0"
+        android:id="@+id/lblCalories"
+        android:layout_marginTop="75dp"
+        android:layout_below="@+id/lblCustomEntry"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
