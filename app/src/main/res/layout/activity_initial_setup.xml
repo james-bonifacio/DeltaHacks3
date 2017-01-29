@@ -115,10 +115,10 @@
     </RadioGroup>
 
     <Button
-        android:text="Button"
+        android:text="Next"
         android:layout_width="128dp"
         android:layout_height="71dp"
-        android:id="@+id/button2"
+        android:id="@+id/btnNext"
         android:textColor="@android:color/white"
         android:background="@color/colorPrimaryDark"
         android:layout_alignParentBottom="true"
@@ -132,7 +132,7 @@
         android:id="@+id/dockey"
         android:hint="Doctor Key"
         android:visibility="invisible"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/btnNext"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
