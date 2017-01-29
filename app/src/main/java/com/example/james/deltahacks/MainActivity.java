@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCustomEntry;
     private Button btnInitial;
     private Button btnAddEntry;
+    private Button btnAchievements;
 
     private TextView lblScore;
     private TextView lblStreak;
@@ -46,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         lblScore.setText("Score: " + arr[0]);
         lblStreak.setText("Streak: " + arr[1]);
-        lblMacros.setText(arrCurr[0] +","+ arrCurr[1] + "," + arrCurr[2] + "," + arrCurr[3] + "," +arrCurr[4] + "," + arrCurr[5] +","+ arrCurr[6]);
 
         dailyProgressCal.setProgress(Integer.parseInt(arrCurr[0]));
         dailyProgressFat.setProgress(Integer.parseInt(arrCurr[1]));
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
         lblScore = (TextView)findViewById(R.id.lblScore);
         lblStreak = (TextView)findViewById(R.id.lblStreak);
-        lblMacros = (TextView)findViewById(R.id.lblMacros);
 
         dailyProgressCal = (ProgressBar)findViewById(R.id.dailyProgressCal);
         dailyProgressFat = (ProgressBar)findViewById(R.id.dailyProgressFat);
@@ -90,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
         lblScore.setText("Score: " + arr[0]);
         lblStreak.setText("Streak: " + arr[1]);
-        lblMacros.setText(arrCurr[0] +","+ arrCurr[1] + "," + arrCurr[2] + "," + arrCurr[3] + "," +arrCurr[4] + "," + arrCurr[5] +","+ arrCurr[6]);
 
         dailyProgressCal.setProgress(Integer.parseInt(arrCurr[0]));
         dailyProgressFat.setProgress(Integer.parseInt(arrCurr[1]));
@@ -99,6 +97,17 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressSugar.setProgress(Integer.parseInt(arrCurr[4]));
         dailyProgressSodium.setProgress(Integer.parseInt(arrCurr[5]));
         dailyProgressFiber.setProgress(Integer.parseInt(arrCurr[6]));
+
+
+        btnAchievements = (Button)findViewById(R.id.btnAchievements);
+        btnAchievements.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), Achievements.class);
+
+                startActivity(i);
+            }
+        });
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener(){

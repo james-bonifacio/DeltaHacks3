@@ -28,10 +28,10 @@
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblMacros"
         android:id="@+id/mainTitle"
         android:layout_alignParentEnd="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:layout_below="@+id/lblStreak" />
 
     <ProgressBar
         android:id="@+id/dailyProgressFat"
@@ -209,10 +209,10 @@
         android:text="Go to Add Entry"
         android:id="@+id/btnAddEntry"
         android:layout_above="@+id/btnInitial"
-        android:layout_alignRight="@+id/btnInitial"
-        android:layout_alignEnd="@+id/btnInitial"
         android:layout_alignLeft="@+id/btnInitial"
-        android:layout_alignStart="@+id/btnInitial" />
+        android:layout_alignStart="@+id/btnInitial"
+        android:layout_alignRight="@+id/btnInitial"
+        android:layout_alignEnd="@+id/btnInitial" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -221,7 +221,8 @@
         android:text="Hi, Dean!"
         android:id="@+id/Name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp" />
+        android:layout_marginTop="0dp"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -230,8 +231,7 @@
         android:text="Score: NA"
         android:id="@+id/lblScore"
         android:layout_below="@+id/Name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -242,14 +242,6 @@
         android:layout_below="@+id/lblScore"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/lblMacros"
-        android:layout_below="@+id/lblStreak"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -257,5 +249,16 @@
         android:id="@+id/btnInitial"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Achievements"
+        android:id="@+id/btnAchievements"
+        android:layout_above="@+id/btnAddEntry"
+        android:layout_alignLeft="@+id/btnAddEntry"
+        android:layout_alignStart="@+id/btnAddEntry"
+        android:layout_alignRight="@+id/btnAddEntry"
+        android:layout_alignEnd="@+id/btnAddEntry" />
 
 </RelativeLayout>
