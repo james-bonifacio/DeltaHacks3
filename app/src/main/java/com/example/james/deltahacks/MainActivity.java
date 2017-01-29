@@ -3,6 +3,7 @@ package com.example.james.deltahacks;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -56,15 +57,11 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressFiber.setProgress(Integer.parseInt(arrCurr[6]));
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("data","0:0:0:0,0,0,0,0,0,0:0,0,0,0,0,0,0");
-        editor.apply();
 
         btnInitial = (Button)findViewById(R.id.btnInitial);
         btnInitial.setOnClickListener(btnClickListener);
@@ -84,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressSodium = (ProgressBar)findViewById(R.id.dailyProgressSodium);
         dailyProgressFiber = (ProgressBar)findViewById(R.id.dailyProgressFiber);
 
+        SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
         String data = sharedPref.getString("data", "");
         String[] arr = data.split(":");
         String[] arrCurr = arr[4].split(",");
@@ -102,8 +100,10 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressSodium.setProgress(Integer.parseInt(arrCurr[5]));
         dailyProgressFiber.setProgress(Integer.parseInt(arrCurr[6]));
     }
-    
+
     private View.OnClickListener btnClickListener = new View.OnClickListener(){
+
+
 
         @Override
         public void onClick(View v) {
