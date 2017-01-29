@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Entry"
-        android:id="@+id/btnAdd"
+        android:id="@+id/btnAddEntry"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Custom"
         android:id="@+id/btnCustom"
-        android:layout_above="@+id/btnAdd"
+        android:layout_above="@+id/btnAddEntry"
         android:layout_centerHorizontal="true" />
 
     <FrameLayout

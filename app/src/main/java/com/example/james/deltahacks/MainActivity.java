@@ -11,6 +11,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnCustomEntry;
+    private Button btnInitial;
+    private Button btnAddEntry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
         btnCustomEntry = (Button)findViewById(R.id.btnCustomEntry);
         btnCustomEntry.setOnClickListener(btnClickListener);
+
+        btnInitial = (Button)findViewById(R.id.btnInitial);
+        btnInitial.setOnClickListener(btnClickListener);
+
+        btnAddEntry = (Button)findViewById(R.id.btnAddEntry);
+        btnAddEntry.setOnClickListener(btnClickListener);
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener(){
@@ -30,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
                     Intent i = new Intent(v.getContext(), CustomEntry.class);
 
                     startActivity(i);
+                    break;
+                case R.id.btnInitial:
+                    Intent j = new Intent(v.getContext(), InitialSetup.class);
+
+                    startActivity(j);
+                    break;
+                case R.id.btnAddEntry:
+                    Intent k = new Intent(v.getContext(), AddEntry.class);
+
+                    startActivity(k);
+                    break;
             }
         }
     };
