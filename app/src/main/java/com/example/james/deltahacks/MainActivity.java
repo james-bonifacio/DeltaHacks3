@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         String data = sharedPref.getString("data", "");
         String[] arr = data.split(":");
         String[] arrCurr = arr[4].split(",");
+        String[] arrGoal = arr[3].split(",");
 
 
         lblScore.setText("Score: " + arr[0]);
