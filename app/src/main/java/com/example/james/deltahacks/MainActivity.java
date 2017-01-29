@@ -3,7 +3,7 @@ package com.example.james.deltahacks;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.widget.MaterialProgressDrawable;
+//import android.support.v4.widget.MaterialProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,12 +32,16 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar dailyProgressFiber;
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        btnCustomEntry = (Button)findViewById(R.id.btnCustomEntry);
-        btnCustomEntry.setOnClickListener(btnClickListener);
 
         btnInitial = (Button)findViewById(R.id.btnInitial);
         btnInitial.setOnClickListener(btnClickListener);
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         dailyProgressProtein = (ProgressBar)findViewById(R.id.dailyProgressProtein);
         dailyProgressCarbs = (ProgressBar)findViewById(R.id.dailyProgressCarbs);
         dailyProgressSugar = (ProgressBar)findViewById(R.id.dailyProgressSugar);
-        dailyProgressSodium = (ProgressBar)findViewById(R.id.dailProgressSodium);
+        dailyProgressSodium = (ProgressBar)findViewById(R.id.dailyProgressSodium);
         dailyProgressFiber = (ProgressBar)findViewById(R.id.dailyProgressFiber);
 
         SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
@@ -79,15 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener btnClickListener = new View.OnClickListener(){
 
+
+
         @Override
         public void onClick(View v) {
             switch(v.getId()){
-                case R.id.btnCustomEntry:
-
-                    Intent i = new Intent(v.getContext(), CustomEntry.class);
-
-                    startActivity(i);
-                    break;
                 case R.id.btnInitial:
                     Intent j = new Intent(v.getContext(), InitialSetup.class);
 

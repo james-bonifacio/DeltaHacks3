@@ -144,6 +144,7 @@ public class AddEntry extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("data", text);
         editor.apply();
+        editor.commit();
     }
 
     public String ReadBtn() {
