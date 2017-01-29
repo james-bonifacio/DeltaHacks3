@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_initial_setup"
     android:layout_width="match_parent"
@@ -14,121 +14,138 @@
         android:text="Welcome to Delta Diet!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp" />
+        android:layout_x="20dp"
+        android:layout_y="19dp"
+        android:id="@+id/textView14"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary" />
 
     <TextView
-        android:text="Please input accurate information below "
+        android:text="Please enter accurate information below"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:id="@+id/textView2"
+        android:layout_x="49dp"
+        android:layout_y="65dp"
+        android:id="@+id/textView15"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_x="20dp"
+        android:layout_y="85dp"
+        android:id="@+id/editText8"
+        android:hint="First Name"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_x="20dp"
+        android:layout_y="120dp"
+        android:id="@+id/editText9"
+        android:hint="Weight (lbs)"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary" />
+
+    <TextView
+        android:text="Nutrition Setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="49dp"
+        android:layout_y="245dp"
+        android:id="@+id/textView16"
         android:textSize="18sp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:textColor="#5a942b" />
+        android:textColor="@color/colorPrimaryDark" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:textColor="#7BC044"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:hint="Weight (lbs)" />
-
-    <Button
-        android:text="Next"
+    <TextView
+        android:text="Gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_marginBottom="112dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="#5a924b"
-        android:onClick="#7BC044"
-        android:textColor="@android:color/white" />
+        android:layout_x="49dp"
+        android:layout_y="170dp"
+        android:id="@+id/textView17"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_marginTop="35dp"
-        android:textColor="#7bc044"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:hint="First Name" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
+    <RadioGroup
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:padding="3dp"
-        android:weightSum="3"
-        android:layout_marginBottom="17dp"
-        android:layout_above="@+id/button"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText">
+        android:layout_x="20dp"
+        android:layout_y="195dp">
 
         <RadioButton
             android:text="Male"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/radioButton12"
             android:layout_weight="1"
-            android:id="@+id/radioButton"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/editText"
-            android:layout_alignStart="@+id/editText"
+            android:layout_x="23dp"
+            android:layout_y="201dp"
             android:textColor="@color/colorPrimary" />
 
         <RadioButton
             android:text="Female"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/radioButton11"
             android:layout_weight="1"
-            android:id="@+id/radioButton2"
-            android:layout_alignBaseline="@+id/radioButton"
-            android:layout_alignBottom="@+id/radioButton"
-            android:layout_toRightOf="@+id/radioButton"
-            android:layout_toEndOf="@+id/radioButton"
+            android:layout_x="131dp"
+            android:layout_y="201dp"
+            android:textColor="@color/colorPrimary" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_y="270dp"
+        android:layout_x="20dp">
+
+        <RadioButton
+            android:text="Recommended"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton14"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary" />
 
         <RadioButton
             android:text="Custom"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/radioButton13"
             android:layout_weight="1"
-            android:layout_alignTop="@+id/radioButton2"
-            android:layout_toRightOf="@+id/radioButton2"
-            android:layout_toEndOf="@+id/radioButton2"
-            android:id="@+id/radioButton3"
-            tools:width="30dp"
             android:textColor="@color/colorPrimary" />
+    </RadioGroup>
 
-    </LinearLayout>
-
-    <TextView
-        android:text="Nutritional Setting"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:id="@+id/textView3"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_x="20dp"
+        android:layout_y="315dp"
+        android:id="@+id/editText10"
+        android:hint="Doctor Key"
+        android:visibility="invisible" />
 
-</RelativeLayout>
+    <Button
+        android:text="Button"
+        android:layout_width="128dp"
+        android:layout_height="71dp"
+        android:layout_x="20dp"
+        android:layout_y="390dp"
+        android:id="@+id/button2"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark" />
+
+</AbsoluteLayout>
