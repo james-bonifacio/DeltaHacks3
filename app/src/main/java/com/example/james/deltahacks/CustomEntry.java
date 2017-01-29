@@ -7,20 +7,50 @@ import android.widget.TextView;
 
 public class CustomEntry extends AppCompatActivity {
 
-    private SeekBar seekBarFat, seekBarProtein, seekBarCarbs, seekBarSugar, seekBarFiber, seekBarSodium;
-    private TextView lblFat, lblProtein, lblCarbs, lblSugar, lblFiber, lblSodium;
+    private SeekBar seekBarCalories, seekBarFat, seekBarProtein, seekBarCarbs, seekBarSugar, seekBarFiber, seekBarSodium;
+    private TextView lblCalories, lblFat, lblProtein, lblCarbs, lblSugar, lblFiber, lblSodium;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_entry);
 
+        seekBarCalories();
         seekBarFat();
         seekBarProtein();
         seekBarCarbs();
         seekBarSugar();
         seekBarFiber();
         seekBarSodium();
+    }
+
+    public void seekBarCalories(){
+
+        seekBarCalories = (SeekBar) findViewById(R.id.seekBarCalories);
+        lblCalories = (TextView) findViewById(R.id.lblCalories);
+
+        seekBarCalories.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener() {
+
+                    int progressValue;
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                        progressValue = progress;
+                        lblCalories.setText("Calories: " + String.valueOf(seekBarCalories.getProgress()));
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+
+                        lblCalories.setText("Calories: " + String.valueOf(seekBarCalories.getProgress()));
+                    }
+                }
+        );
     }
 
     public void seekBarFat(){
