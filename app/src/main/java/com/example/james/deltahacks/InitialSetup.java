@@ -21,7 +21,7 @@ public class InitialSetup extends AppCompatActivity {
         View.OnClickListener listen = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // field.setHintTextColo;
+                field.setHintTextColo;
             }
         };
 
