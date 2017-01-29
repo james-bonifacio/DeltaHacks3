@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView lblScore;
     private TextView lblStreak;
     private TextView lblMacros;
+
+    private ProgressBar dailyProgressCal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         lblStreak = (TextView)findViewById(R.id.lblStreak);
         lblMacros = (TextView)findViewById(R.id.lblMacros);
 
+        dailyProgressCal = (ProgressBar)findViewById(R.id.dailyProgressCal);
+
         SharedPreferences sharedPref = getSharedPreferences("data", Context.MODE_PRIVATE);
         String data = sharedPref.getString("data", "");
         String[] arr = data.split(":");
@@ -49,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         lblStreak.setText("Streak: " + arr[1]);
         lblMacros.setText(arrCurr[0] +","+ arrCurr[1] + "," + arrCurr[2] + "," + arrCurr[3] + "," +arrCurr[4] + "," + arrCurr[5] +","+ arrCurr[6]);
 
+        dailyProgressCal.setProgress(Integer.parseInt(arrCurr[0]));
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener(){

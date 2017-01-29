@@ -34,11 +34,8 @@
         android:text="Current Daily Macro Count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lblMacros"
         android:id="@+id/mainTitle"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
@@ -51,7 +48,7 @@
         android:layout_below="@+id/dailyProgressCal"
         android:layout_toLeftOf="@+id/textView4"
         android:layout_toStartOf="@+id/textView4"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:indeterminate="false"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
 
@@ -73,11 +70,37 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dailyProgressFat"
         android:layout_toStartOf="@+id/lblTotalChol"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="16dp"
         android:indeterminate="false"
+        android:max="200"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_alignRight="@+id/dailyProgressFat"
         android:layout_alignEnd="@+id/dailyProgressFat" />
+
+    <ProgressBar
+        android:id="@+id/dailyProgressSodium"
+        android:layout_marginLeft="12dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dailyProgressChol"
+        android:layout_toStartOf="@+id/lblTotalSodium"
+        android:layout_marginTop="16dp"
+        android:indeterminate="false"
+        android:max="200"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignRight="@+id/dailyProgressFat"
+        android:layout_alignEnd="@+id/dailyProgressFat" />
+
+    <TextView
+        android:text="Sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTotalSodium"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignTop="@+id/dailyProgressSodium"
+        android:layout_alignLeft="@+id/lblFat"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ProgressBar
         android:id="@+id/dailyProgressCal"
@@ -88,9 +111,10 @@
         android:layout_below="@+id/mainTitle"
         android:layout_toLeftOf="@+id/lblFat"
         android:layout_toStartOf="@+id/lblFat"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="28dp"
         android:indeterminate="false"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="2200"/>
 
     <TextView
         android:text="Cholesterol"
@@ -124,9 +148,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Score: NA"
         android:id="@+id/lblScore"
-        android:layout_below="@+id/lblFat"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
